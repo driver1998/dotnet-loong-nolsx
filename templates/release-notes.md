@@ -8,11 +8,6 @@ The .NET SDKs provided by this service conforms to the LoongArch new world ("ABI
 
 Some components of .NET SDK are written in C/C++ and architecture-dependent. We adopt **LoongArch64** as the baseline of binary compatibility for LoongArch, and follow the [*Software Development and Build Convention for LoongArch™ Architectures* v0.1][la-softdev-convention]. This release is compatible with LoongArch platforms that does not provide LSX, like 2K0300.
 
-> [!NOTE]
-> This also means *our SDKs will not work on platforms without LSX*, that mainly involve models deemed for "embedded" or "industrial controls" use cases by Loongson and other vendors, including but not limited to the Loongson 1 series, 2K1000LA, 2K0500, and 2K0300.
->
-> If you need to deploy our SDKs on such platforms, please post on [the issue tracker][issue-tracker], although we may not be able to implement such support in the short term.
-
 [loongnix-dotnet]: http://www.loongnix.cn/zh/api/dotnet/
 [awly-old-and-new-worlds]: https://areweloongyet.com/docs/old-and-new-worlds/
 [la-softdev-convention]: https://github.com/loongson/la-softdev-convention/blob/v0.1/la-softdev-convention.adoc
