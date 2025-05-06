@@ -93,16 +93,16 @@ main() {
 
     unpack_sb_artifacts
 
-    if [[ -n $ROOTFS_GLIBC_DIR ]]; then
-        export ROOTFS_DIR="$ROOTFS_GLIBC_DIR"
-        # stage2 wants to run crossgen2 but it's for $TARGET_ARCH instead of
-        # $BUILD_ARCH
-        export QEMU_LD_PREFIX="$ROOTFS_DIR"
-        prepare_vmr_stage2 "$DOTNET_VMR_CHECKOUT"
-        setup_flags 2
-        build_vmr_stage2 "$DOTNET_VMR_CHECKOUT" "$TARGET_GLIBC_RID"
-        maybe_dump_ccache_stats
-    fi
+    # if [[ -n $ROOTFS_GLIBC_DIR ]]; then
+        # export ROOTFS_DIR="$ROOTFS_GLIBC_DIR"
+        # # stage2 wants to run crossgen2 but it's for $TARGET_ARCH instead of
+        # # $BUILD_ARCH
+        # export QEMU_LD_PREFIX="$ROOTFS_DIR"
+        # prepare_vmr_stage2 "$DOTNET_VMR_CHECKOUT"
+        # setup_flags 2
+        # build_vmr_stage2 "$DOTNET_VMR_CHECKOUT" "$TARGET_GLIBC_RID"
+        # maybe_dump_ccache_stats
+    # fi
 
     if [[ -n $ROOTFS_MUSL_DIR ]]; then
         export ROOTFS_DIR="$ROOTFS_MUSL_DIR"
